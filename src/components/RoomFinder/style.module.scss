@@ -1,0 +1,13 @@
+.search {
+  @apply w-72 pl-3.5 pr-2.5 py-1.5 border-2 border-zinc-300 inline-flex items-center bg-white rounded-3xl
+  transition-all duration-200;
+  &:focus-within {
+    @apply border-blue-500;
+  }
+  .icon {
+    @apply w-5 h-auto mr-1.5 text-zinc-400;
+  }
+  .searchbar {
+    @apply w-full bg-transparent outline-none;
+  }
+}

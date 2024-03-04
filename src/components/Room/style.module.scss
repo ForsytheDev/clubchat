@@ -1,0 +1,60 @@
+.room {
+  border-radius: 2.5rem 2.5rem 0 0;
+  @apply px-14 py-4 h-96 flex flex-col grow bg-white shadow-md overflow-hidden;
+  .head {
+    @apply px-2 py-3 flex items-center justify-between;
+    .title {
+      @apply text-3xl font-extrabold truncate;
+    }
+    .controls {
+      @apply gap-5 inline-flex items-center;
+      .settings {
+        @apply p-1.5 flex items-center bg-white rounded-3xl relative
+        transition-colors duration-200;
+        .settingsIcon {
+          @apply w-auto h-6 text-zinc-700;
+        }
+        .popup {
+          @apply w-40 py-1.5 top-9 right-0 invisible opacity-0 scale-0 origin-top-right flex flex-col justify-center bg-white
+          z-10 rounded-md shadow-md absolute
+          transition-all duration-200;
+          .option {
+            @apply w-full h-full px-3 py-1 text-left font-medium hover:bg-zinc-50 transition-colors duration-200;
+          }
+        }
+        .opened {
+          @apply visible opacity-100 scale-100;
+        }
+      }
+      .opened {
+        @apply bg-zinc-100;
+      }
+    }
+  }
+  .members {
+    @apply flex flex-col grow;
+    .speakers {
+      @apply gap-5 inline-flex;
+    }
+  }
+  .chat {
+    @apply p-2 h-full flex flex-col grow overflow-hidden relative;
+    .messages {
+      @apply p-4 w-full h-full grow flex flex-col bg-zinc-50 rounded-xl overflow-auto;
+    }
+  }
+  .form {
+    @apply px-4 py-2 gap-1 w-full flex;
+    .input {
+      @apply mr-1 px-4 py-3 border-2 border-zinc-300 grow rounded-md focus:outline-none focus:border-blue-500;
+    }
+    .submit {
+      @apply px-4 font-semibold text-white bg-blue-500 rounded-md transition-all duration-200 ease-in-out cursor-pointer
+      hover:bg-blue-600 active:bg-blue-400;
+    }
+    .attach {
+      @apply px-4 font-semibold text-white bg-teal-500 rounded-md transition-all duration-200 ease-in-out cursor-pointer
+      hover:bg-teal-400 active:bg-teal-600;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.rooms {
+  @apply mb-12 pt-10 flex flex-col grow;
+  .head {
+    @apply mb-10 px-4 flex items-center justify-between;
+    .title {
+      @apply text-3xl font-extrabold;
+    }
+    .controls {
+      @apply gap-5 flex;
+      .finder {
+        @apply px-2.5 py-2 flex items-center bg-zinc-100 border-2 border-zinc-300 rounded-lg outline-none
+        hover:bg-zinc-50 active:bg-zinc-100 transition-colors duration-200;
+      }
+    }
+  }
+  .container {
+    @apply gap-y-10 grid grid-cols-[repeat(3,_384px)] justify-between;
+  }
+}
